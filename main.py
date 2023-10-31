@@ -1,3 +1,6 @@
+#  win32com library is a python library is used to convert text to speech in python
+# please install  win32com library before running this code to make it vocal.
+
 import win32com.client
 speaker = win32com.client.Dispatch("SAPI.SpVoice")
 
@@ -56,6 +59,7 @@ def main():
 
                 case _:
                     print("You did not give valid num")  
+                    speaker.Speak("sorry! you didn't give valid number")
         
             count +=1  
         except Exception as e:
